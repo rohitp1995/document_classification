@@ -7,7 +7,7 @@ class dogcat:
         self.filename =filename
 
 
-    def predictiondogcat(self):
+    def prediction(self):
         
         model = load_model('/artifcats/model/model_vgg16.h5')
 

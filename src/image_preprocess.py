@@ -1,8 +1,6 @@
 import tensorflow as tf
 
 
-
-
 class ImagePreprocess:
 
     def __init__(self, shear_range, zoom_range, horizontal_flip =True):
