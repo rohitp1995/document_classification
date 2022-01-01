@@ -15,30 +15,33 @@ IMAGE_DIR:
   VALIDATION_DIR: documents/validation  
 
 IMAGE_PREPROCESS:
-  SHEAR_RANGE: 0.2
-  ZOOM_RANGE: 0.2
-  TARGET_SIZE: 256
-  BATCH_SIZE : 20
-
+ SHEAR_RANGE: 0.2
+ ZOOM_RANGE: 0.2
+ TARGET_SIZE: 256
+ BATCH_SIZE : 20
 
 artifacts:
-  artifacts_dir: artifacts
-  model_dir: model
-  model_name: model.h5
-  CHECKPOINT_DIR: checkpoints
+ artifacts_dir: artifacts
+ model_dir: model
+ model_name: model.h5
+ CHECKPOINT_DIR: checkpoints
     
-
 EMAIL:
  USER: rohit050695@gmail.com
  PWD: bjkoxaaujyloxeic
  FROM: rohit050695@gmail.com
- SUBJECT: DOCUMENTS FOR PROCESSING
- TEXT_MESSAGE: Please find attached the zip file
-
+ TO: rohit050695@gmail.com
+ FILENAME: file.zip
+ SUBJECT: Company documents
  
- logs:
-  logs_dir: logs_dir
-  general_logs: general_logs
+zip:
+ path_to_zip_file: zip_files/files.zip
+ directory_to_extract_to: 'extracted_data'
+ zip_directory: 'zip_directory'
+
+logs:
+ logs_dir: logs_dir
+ general_logs: general_logs
 
 CALLBACKS:
   patience: 5
